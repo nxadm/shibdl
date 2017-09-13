@@ -29,7 +29,7 @@ func (p *Params) getTestParams() error {
 	// export SHIBDL_CONNECTION_PARAMS=/var/tmp/params.json"
 	config := os.Getenv("SHIBDL_CONNECTION_PARAMS")
 	if config == "" {
-		return errors.New("No json configuration provided ($SHIBDL_CONNECTION_PARAMS)")
+		return nil
 	}
 
 	raw, err := ioutil.ReadFile(config)

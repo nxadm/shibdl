@@ -8,7 +8,7 @@ Download files secured by a Shibboleth IdP.
 
 See the help page:
 
-```
+```console
 $ shibdl -h
 shibdl, v x.x.x
 Download files secured by a Shibboleth IdP.

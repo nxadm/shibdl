@@ -17,7 +17,7 @@ type Defaults struct {
 
 const author = "Claudio Ramirez <pub.claudio@gmail.com>"
 const repo = "https://github.com/nxadm/shib-download-file"
-const version = "v0.4.2"
+const version = "v0.4.3"
 const maxForms = 5
 
 var defaults = Defaults{

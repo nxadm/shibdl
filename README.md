@@ -26,7 +26,7 @@ Usage:
 
 Options:
   <URL>                              URL to download
-  -u <user>, --user <user>			 Username
+  -u <user>, --user <user>           Username
   -p <password>, --pass <password>   Password
   -P, --prompt                       Prompt for password
   -d <directory>, --dir <directory>  Directory to safe file (optional)

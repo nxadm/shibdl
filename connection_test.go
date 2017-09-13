@@ -1,11 +1,11 @@
 package main
 
 import (
+	"encoding/json"
+	"errors"
+	"io/ioutil"
 	"os"
 	"testing"
-	"encoding/json"
-	"io/ioutil"
-	"errors"
 )
 
 func TestDownload(t *testing.T) {
@@ -23,11 +23,11 @@ func TestDownload(t *testing.T) {
 	}
 }
 
-func(p *Params) getTestParams() error {
+func (p *Params) getTestParams() error {
 	// See sampleTestConnectionParams.json for a test configuration file
 	// Load it as an environment variable, e.g.:
 	// export SHIBDL_CONNECTION_PARAMS=/var/tmp/params.json"
-	config := os.Getenv("SHIBDL_CONNECTION_PARAMS");
+	config := os.Getenv("SHIBDL_CONNECTION_PARAMS")
 	if config == "" {
 		return errors.New("No json configuration provided ($SHIBDL_CONNECTION_PARAMS)")
 	}

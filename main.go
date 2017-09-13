@@ -2,13 +2,12 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"github.com/briandowns/spinner"
+	"os"
 	"time"
 )
 
 // Use SURF_DEBUG_HEADERS=1 environment variable to print debug headers.
-
 
 /* Application defaults */
 type Defaults struct {
@@ -18,13 +17,13 @@ type Defaults struct {
 
 const author = "Claudio Ramirez <pub.claudio@gmail.com>"
 const repo = "https://github.com/nxadm/shib-download-file"
-const version = "v0.4.1"
+const version = "v0.4.2"
 const maxForms = 5
 
 var defaults = Defaults{
-	Author:  author,
-	Repo:    repo,
-	Version: version,
+	Author:   author,
+	Repo:     repo,
+	Version:  version,
 	MaxForms: maxForms,
 }
 
@@ -34,7 +33,7 @@ func main() {
 	/* Command line interface */
 	params := getParams(defaults)
 	fmt.Println("Downloading file...")
-	spinner := spinner.New(spinner.CharSets[35], 500*time.Millisecond)  // Build our new spinner
+	spinner := spinner.New(spinner.CharSets[35], 500*time.Millisecond) // Build our new spinner
 	spinner.Start()                                                    // Start the spinner
 	file, err := download(params)
 	spinner.Stop()

@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"github.com/docopt/docopt-go"
+	"github.com/howeyc/gopass"
 	"golang.org/x/crypto/ssh/terminal"
 	"os"
+	"runtime"
 	"strings"
-	"syscall"
 )
 
 type Params struct {
@@ -82,11 +83,17 @@ Options:
 }
 
 func promptForPassword() string {
-	fd := syscall.Stdin
 	fmt.Print("Enter Password: ")
 	var password string
+	var bytePassword []byte
+	var err error
 	for {
-		bytePassword, err := terminal.ReadPassword(fd)
+		switch {
+		case runtime.GOOS == "windows":
+			bytePassword, err = gopass.GetPasswd()
+		default:
+			bytePassword, err = terminal.ReadPassword(0)
+		}
 		if err == nil {
 			password = string(bytePassword)
 			fmt.Println()

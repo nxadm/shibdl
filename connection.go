@@ -33,7 +33,6 @@ func download(params Params) (string, error) {
 		return "", errors.New("Can not create local file")
 	}
 
-
 	/* 2. Prepare the request */
 	bow := surf.NewBrowser()
 	bow.SetUserAgent("shibdl/" + defaults.Version)

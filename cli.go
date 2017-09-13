@@ -63,7 +63,7 @@ Author: ` + defaults.Author + `.
     // \\   // \\   // \\   // \\   // \\   // \\   // \\   // \\
 
 Usage:
-  shibdl <URL> -u user [-p password | -P ] [-f file | -d directory] [-l]
+  shibdl <URL> -u user [-p password | -P ] [-f file | -d directory]
   shibdl -h | --help
   shibdl -v | --version
 

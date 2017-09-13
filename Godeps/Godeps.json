@@ -1,0 +1,12 @@
+{
+	"ImportPath": "github.com/nxadm/shibdl",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/docopt/docopt-go",
+			"Comment": "0.6.2",
+			"Rev": "784ddc588536785e7299f7272f39101f7faccc3f"
+		}
+	]
+}

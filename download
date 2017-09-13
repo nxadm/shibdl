@@ -1,0 +1,3 @@
+naam;unummer;email_verantw;voornaamb;naamb;ku-leuven-id-u-nummer;itmoub;omgeving;standaardx;extraa;extrab;extrac;extrad;extrae;opmerkingen;naam_aanvrager;unummer_aanvrager;email_aanvrager;dt
+Bob Deboutte;u0113043;bob.deboutte@kuleuven.be;GBW;Jacky Debruin;u1337808;GHUM;['LUNA', 'QAD', 'TAD'];['Standaard x', 'extra a', 'extra b'];True;True;False;True;False;False;Ik wil een x-acc;Bob Deboutte;u0113043;bob.deboutte@kuleuven.be
+Bob Deboutte;u0113043;bob.deboutte@kuleuven.be;CRD;Bob;u0111337;KOR;['LUNA', 'QAD', 'TAD'];True;True;False;False;False;False;Voorbeeld;Bob Deboutte;u0113043;bob.deboutte@kuleuven.be

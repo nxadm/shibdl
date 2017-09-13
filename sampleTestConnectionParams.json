@@ -1,0 +1,6 @@
+{
+    "url": "https://somedomain/file",
+    "user": "foo",
+    "password": "bar",
+    "localStorage": true
+}

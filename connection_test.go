@@ -10,7 +10,10 @@ import (
 
 func TestDownload(t *testing.T) {
 	testParams := Params{}
-	err := testParams.getTestParams()
+	skip, err := testParams.getTestParams()
+	if skip {
+		return
+	}
 	if err != nil {
 		t.Error(err)
 	}
@@ -23,24 +26,24 @@ func TestDownload(t *testing.T) {
 	}
 }
 
-func (p *Params) getTestParams() error {
+func (p *Params) getTestParams() (bool, error) {
 	// See sampleTestConnectionParams.json for a test configuration file
 	// Load it as an environment variable, e.g.:
 	// export SHIBDL_CONNECTION_PARAMS=/var/tmp/params.json"
 	config := os.Getenv("SHIBDL_CONNECTION_PARAMS")
 	if config == "" {
-		return nil
+		return true, nil
 	}
 
 	raw, err := ioutil.ReadFile(config)
 	if err != nil {
-		return errors.New("Can not read the json configuration provided ($SHIBDL_CONNECTION_PARAMS)")
+		return false, errors.New("Can not read the json configuration provided ($SHIBDL_CONNECTION_PARAMS)")
 	}
 
 	err = json.Unmarshal(raw, p)
 	if err != nil {
-		return errors.New("Can not parse the json configuration provided ($SHIBDL_CONNECTION_PARAMS)")
+		return false, errors.New("Can not parse the json configuration provided ($SHIBDL_CONNECTION_PARAMS)")
 	}
 
-	return nil
+	return false, nil
 }

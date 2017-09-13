@@ -10,7 +10,7 @@ See the help page:
 
 ```console
 $ shibdl -h
-shibdl, v x.x.x
+shibdl, vx.x.x
 Download files secured by a Shibboleth IdP.
 Code, bugs and feature requests: https://github.com/nxadm/shibdl.
 Author: Claudio Ramirez <pub.claudio@gmail.com>.

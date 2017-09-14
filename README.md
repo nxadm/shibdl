@@ -4,7 +4,7 @@
 
 Download files secured by a Shibboleth IdP.
 
-Release can be found at [releases](https://github.com/nxadm/shibdl/releases).
+Releases can be found at [releases](https://github.com/nxadm/shibdl/releases).
 
 ## Usage
 
